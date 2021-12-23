@@ -47,7 +47,7 @@ public abstract class ItemStackMixin {
         List<Text> tooltips = cir.getReturnValue();
         // edit: slashed the size and made some reusable methods because im lazy, screw you, me
         if(nbt != null && hasSmithedNBT(nbt) && context.isAdvanced() && tooltips != null) {
-            if (nbt.getCompound("smithed").get("durability") != null && isDamageable())
+            if (getSmithed(nbt).get("durability") != null && isDamageable())
                 tooltips.remove(tooltips.size() - 3);
 
             if (getSmithed(nbt).get("identifier") != null)
