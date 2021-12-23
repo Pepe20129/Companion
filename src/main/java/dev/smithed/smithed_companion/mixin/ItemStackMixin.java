@@ -60,7 +60,7 @@ public abstract class ItemStackMixin {
 
     @Inject(method = "getName", at = @At(value = "RETURN"), cancellable = true)
     public void injectName(CallbackInfoReturnable<Text> cir) {
-        cir.setReturnValue(null);
+        
     }
 
 
